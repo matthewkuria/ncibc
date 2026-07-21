@@ -1,12 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { Metadata } from "next";
 import SemesterTimeline from "./components/SemesterTimeline";
 import NationsList from "./components/NationsList";
+import HeroCarousel from "./components/HeroCarousel";
 
-// Define the SEO metadata for the College Home Page
+// SEO metadata for the College Home Page. This only works because this
+// file is a server component — metadata can't be exported from a file
+// marked "use client", which is why the hero's image carousel lives in
+// its own client component (HeroCarousel) instead of here.
 export const metadata: Metadata = {
   title: "New Creation International Bible College | Nakuru, Kenya",
-  description: "Train for full-time ministry, leadership, and the marketplace. NCIBC is a licensed TVET institution in Nakuru, Kenya offering a 16-month Diploma in Christian Ministry taught in English and Kiswahili.",
+  description:
+    "Train for full-time ministry, leadership, and the marketplace. NCIBC is a licensed TVET institution in Nakuru, Kenya offering a 16-month Diploma in Christian Ministry taught in English and Kiswahili.",
   keywords: [
     "Bible College Kenya",
     "NCIBC",
@@ -14,12 +19,13 @@ export const metadata: Metadata = {
     "Theology Diploma Kenya",
     "TVET Bible school Nakuru",
     "Ministry training Kenya",
-    "Christian Ministry Diploma"
+    "Christian Ministry Diploma",
   ],
   openGraph: {
     title: "New Creation International Bible College | Nakuru, Kenya",
-    description: "Equipping men and women for ministry and marketplace leadership through our 16-month Diploma program.",
-    url: "https://ncibc.org", // Replace with your actual domain
+    description:
+      "Equipping men and women for ministry and marketplace leadership through our 16-month Diploma program.",
+    url: "https://ncibc.org",
     siteName: "NCIBC",
     locale: "en_US",
     type: "website",
@@ -28,40 +34,33 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "New Creation International Bible College",
     description: "Equipping men and women for ministry and marketplace leadership.",
-  }
+  },
 };
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-ink text-parchment hover:cursor-pointer">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.4]">
-          <div className="h-full w-full" style={{
-            backgroundImage:
-              "url('/ncibc-hero-bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            opacity: 0.4,
-          }} />
-        </div>
-        <div className="mx-auto max-w-6xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
+      <section className="relative overflow-hidden bg-ink">
+        <HeroCarousel />
+
+        <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 text-white md:pb-32 md:pt-28">
           <p className="font-body text-xs uppercase tracking-[0.3em] text-gold">
             Established 1996 &middot; Nakuru, Kenya
           </p>
-          <h1 className="mt-6 max-w-3xl font-display text-4xl italic leading-[1.1] text-balance sm:text-5xl md:text-6xl">
+          <h1 className="mt-6 max-w-3xl font-display text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl">
             Press toward the mark of the high calling.
           </h1>
-          <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/75 md:text-lg">
+          <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
             New Creation International Bible College trains men and women
-            who are serious with God &mdash; in full-time ministry, in leadership,
-            and in the marketplace &mdash; through a 16-month Diploma in Christian
-            Ministry, taught in English and Kiswahili.
+            who are serious with God &mdash; in full-time ministry, in
+            leadership, and in the marketplace &mdash; through a 16-month
+            Diploma in Christian Ministry, taught in English and Kiswahili.
           </p>
-          <div className="mt-10 flex gap-4 md:gap-6">
+          <div className="mt-10 flex flex-wrap gap-4 md:gap-6">
             <Link
               href="/admissions"
-              className="rounded-sm bg-gold px-6 py-3 font-body text-sm font-medium text-ink transition hover:bg-gold-light"
+              className="rounded-sm bg-gold px-6 py-3 font-body text-sm font-medium text-ink shadow-md transition hover:bg-gold-light"
             >
               Apply for Admission
             </Link>
@@ -87,7 +86,7 @@ export default function Home() {
             { n: "2025", l: "Licensed TVET institution" },
           ].map((s) => (
             <div key={s.l}>
-              <p className="font-display text-3xl text-wine md:text-4xl">{s.n}</p>
+              <p className="font-display text-3xl text-gold-dark md:text-4xl">{s.n}</p>
               <p className="mt-1 font-body text-sm text-slate">{s.l}</p>
             </div>
           ))}
@@ -98,7 +97,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid gap-12 md:grid-cols-[1fr_1.4fr]">
           <div>
-            <p className="font-body text-xs uppercase tracking-[0.2em] text-wine">
+            <p className="font-body text-xs uppercase tracking-[0.2em] text-gold-dark">
               Who we are
             </p>
             <h2 className="mt-3 font-display text-3xl italic text-ink">
@@ -121,7 +120,7 @@ export default function Home() {
             </p>
             <Link
               href="/about"
-              className="inline-block font-body text-sm font-medium text-wine underline underline-offset-4 hover:text-ink"
+              className="inline-block font-body text-sm font-medium text-gold-dark underline underline-offset-4 hover:text-ink"
             >
               Read the full story &rarr;
             </Link>
@@ -130,9 +129,9 @@ export default function Home() {
       </section>
 
       {/* Program timeline (signature element) */}
-      <section className="border-y border-ink/10 bg-parchment-dark/40 py-24">
+      <section className="border-y border-ink/10 bg-parchment-dark/60 py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="font-body text-xs uppercase tracking-[0.2em] text-wine">
+          <p className="font-body text-xs uppercase tracking-[0.2em] text-gold-dark">
             The structure
           </p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl italic text-ink">
@@ -150,7 +149,7 @@ export default function Home() {
 
           <Link
             href="/programs"
-            className="mt-14 inline-block font-body text-sm font-medium text-wine underline underline-offset-4 hover:text-ink"
+            className="mt-14 inline-block font-body text-sm font-medium text-gold-dark underline underline-offset-4 hover:text-ink"
           >
             See full program details &rarr;
           </Link>
@@ -188,7 +187,7 @@ export default function Home() {
         </p>
         <Link
           href="/admissions"
-          className="mt-8 inline-block rounded-sm bg-ink px-8 py-3 font-body text-sm text-parchment transition hover:bg-wine"
+          className="mt-8 inline-block rounded-sm bg-ink px-8 py-3 font-body text-sm text-parchment shadow-md transition hover:bg-ink-light"
         >
           Start Your Application
         </Link>
