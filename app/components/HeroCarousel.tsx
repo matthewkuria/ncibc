@@ -49,7 +49,7 @@ export default function HeroCarousel() {
             className={`
               absolute inset-0 h-full w-full
               transition-opacity duration-[${FADE_DURATION}ms] ease-in-out
-              ${isActive ? "opacity-100" : "opacity-0"}
+              ${isActive ? "opacity-90" : "opacity-0"}
             `}
           >
             {/* Image with zoom animation */}

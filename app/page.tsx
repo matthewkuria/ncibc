@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import  {Inter, Bebas_Neue } from "next/font/google";
 import Link from "next/link";
 import SemesterTimeline from "./components/SemesterTimeline";
 import NationsList from "./components/NationsList";
@@ -37,6 +38,14 @@ export const metadata: Metadata = {
   },
 };
 
+const bebas = Bebas_Neue(
+  { subsets: ["latin"],
+  weight: ["400"] 
+
+  }
+);
+
+
 export default function Home() {
   return (
     <>
@@ -48,8 +57,8 @@ export default function Home() {
           <p className="font-body text-xs uppercase tracking-[0.3em] text-gold">
             Established 1996 &middot; Nakuru, Kenya
           </p>
-          <h1 className="mt-6 max-w-3xl font-display text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl">
-            Press toward the mark of the high calling.
+          <h1 className={`${bebas.className} mt-6 max-w-3xl  text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl`}>
+            Welcome to New Creation International Bible College
           </h1>
           <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
             New Creation International Bible College trains men and women
