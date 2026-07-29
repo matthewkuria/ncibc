@@ -1,19 +1,36 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import NationsList from "../components/NationsList";
 
 export const metadata: Metadata = {
   title: "About | New Creation International Bible College",
+
 };
 
 export default function About() {
   return (
     <>
-      <section className="bg-ink py-20 text-parchment">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="font-body text-xs uppercase tracking-[0.2em] text-gold">About</p>
+      <section className="relative flex flex-col justify-end pb-20">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/ncibc-hero-bg6.jpg"
+            alt="The New Creation International Bible College campus"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          {/* Gradient: dark at bottom where text lives, lighter at top */}
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/30" />
+        <div className="relative container mx-auto flex min-h-[45vh] items-center px-6 lg:px-16 mt-24">
+        <div className="px-6 text-parchment">
+          <p className="font-body text-xs uppercase tracking-[0.2em] text-gold">About Us</p>
           <h1 className="mt-3 max-w-2xl font-display text-4xl italic md:text-5xl">
-            Set apart to focus on God.
+            New Creation International Bible College
           </h1>
+        </div>
         </div>
       </section>
 

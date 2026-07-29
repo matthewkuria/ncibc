@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const links = [
+  {href:"/", label:"Home"},
   { href: "/about", label: "About" },
   { href: "/programs", label: "The Program" },
   { href: "/admissions", label: "Admissions" },
@@ -57,9 +58,9 @@ export default function Navbar() {
             aria-expanded={open}
             onClick={() => setOpen(!open)}
           >
-            <span className={`h-0.5 w-6 bg-parchment transition ${open ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`h-0.5 w-6 bg-parchment transition ${open ? "opacity-0" : ""}`} />
-            <span className={`h-0.5 w-6 bg-parchment transition ${open ? "-translate-y-2 -rotate-45" : ""}`} />
+            <span className={`h-0.5 w-6 bg-black transition ${open ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`h-0.5 w-6 bg-black transition ${open ? "opacity-0" : ""}`} />
+            <span className={`h-0.5 w-6 bg-black transition ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </button>
         </div>
       </div>

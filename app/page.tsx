@@ -110,7 +110,7 @@ export default function Home() {
               Who we are
             </p>
             <h2 className="mt-3 font-display text-3xl italic text-ink">
-              A college, not a crowd.
+              A TVET licensed institution.
             </h2>
           </div>
           <div className="space-y-5 font-body text-base leading-relaxed text-ink/80">
