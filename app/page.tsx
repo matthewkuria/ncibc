@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import  {Inter, Bebas_Neue } from "next/font/google";
 import Link from "next/link";
 import SemesterTimeline from "./components/SemesterTimeline";
 import NationsList from "./components/NationsList";
@@ -38,12 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-const bebas = Bebas_Neue(
-  { subsets: ["latin"],
-  weight: ["400"] 
 
-  }
-);
 
 
 export default function Home() {
@@ -57,16 +51,16 @@ export default function Home() {
           <p className="font-body text-xs uppercase tracking-[0.3em] text-gold">
             Established 1996 &middot; Nakuru, Kenya
           </p>
-          <h1 className={`${bebas.className} mt-6 max-w-3xl  text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl`}>
+          <h1 className={`font-display mt-6 max-w-3xl  text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl`}>
             Welcome to New Creation International Bible College
           </h1>
-          <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
+          <p className="hidden md:block mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
             New Creation International Bible College trains men and women
             who are serious with God &mdash; in full-time ministry, in
             leadership, and in the marketplace &mdash; through a 16-month
             Diploma in Christian Ministry, taught in English and Kiswahili.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4 md:gap-6">
+          <div className="mt-10 flex gap-4 md:gap-6">
             <Link
               href="/admissions"
               className="rounded-sm bg-gold px-6 py-3 font-body text-sm font-medium text-ink shadow-md transition hover:bg-gold-light"
@@ -115,10 +109,10 @@ export default function Home() {
           </div>
           <div className="space-y-5 font-body text-base leading-relaxed text-ink/80">
             <p>
-              New Creation International Bible College is non-denominational,
+              New Creation International Bible College is <strong>inter-denominational</strong>,
               set in an atmosphere conducive to focusing wholly on God, His
               Word, and His plan for your life. Since opening in September
-              1996 with three students, the college has equipped and trained
+              1996 with <strong>three students</strong>, the college has equipped and trained
               hundreds of ministers drawn from nations across Africa, Europe,
               Asia, and North America.
             </p>

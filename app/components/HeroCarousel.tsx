@@ -12,9 +12,9 @@ const heroImages = [
 ];
 
 // How long each image is shown, in ms
-const SLIDE_DURATION = 30000;
+const SLIDE_DURATION = 5000;
 // Crossfade duration, in ms
-const FADE_DURATION = 3000;
+const FADE_DURATION = 1000;
 
 export default function HeroCarousel() {
   const [tick, setTick] = useState(0);
@@ -69,7 +69,7 @@ export default function HeroCarousel() {
 
       {/* Gradient Overlay */}
       <div 
-        className="absolute inset-0 bg-gradient-to-tr from-ink via-ink/40 to-ink/10"
+        className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-ink/30"
         aria-hidden="true"
       />
     </div>
