@@ -48,9 +48,6 @@ export default function Home() {
         <HeroCarousel />
 
         <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 text-white md:pb-32 md:pt-28">
-          <p className="font-body text-xs uppercase tracking-[0.3em] text-black bg-gold max-w-[400px] rounded-sm pl-2  md:text-left">
-            Established in 1996 &middot; Nakuru, Kenya
-          </p>
           <h1 className={`font-display mt-6 max-w-3xl  text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl`}>
             Welcome to New Creation International Bible College
           </h1>
