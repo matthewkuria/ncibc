@@ -87,7 +87,7 @@ export default function HeroCarousel() {
       <button
         type="button"
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-ink/50 text-2xl text-white transition hover:bg-ink/80 focus:outline-none focus:ring-2 focus:ring-white"
+        className="absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-ink/50 text-2xl text-white transition hover:bg-ink/80 focus:outline-none focus:ring-2 ring-white"
         aria-label="Previous slide"
       >
         <span aria-hidden="true">‹</span>
@@ -107,7 +107,7 @@ export default function HeroCarousel() {
             key={index}
             type="button"
             onClick={() => goToSlide(index)}
-            className={`h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-white ${
+            className={`h-2.5 rounded-full transition-all  focus:ring-2 ring-white ${
               index === activeIndex ? "w-8 bg-white" : "w-2.5 bg-white/50 hover:bg-white/80"
             }`}
             aria-label={`Go to slide ${index + 1}`}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import SemesterTimeline from "./components/SemesterTimeline";
 import NationsList from "./components/NationsList";
 import HeroCarousel from "./components/HeroCarousel";
+import StatsCard from "./components/StatsCard";
 
 export const metadata: Metadata = {
   title: "New Creation International Bible College | Nakuru, Kenya",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     title: "New Creation International Bible College",
     description: "Equipping men and women for ministry and marketplace leadership.",
   },
-  
+
 };
 
 
@@ -45,25 +46,26 @@ export default function Home() {
         <HeroCarousel />
 
         <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 text-white md:pb-32 md:pt-28">
-          <h1 className={`font-display mt-6 max-w-3xl  text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl`}>
+          <h1
+            className={`font-display mt-6 max-w-3xl  text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl`}
+          >
             Welcome to New Creation International Bible College
           </h1>
           <p className="hidden md:block mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
-            New Creation International Bible College trains men and women
+            At New Creation International Bible College we train men and women
             who are serious with God &mdash; in full-time ministry, in
-            leadership, and in the marketplace &mdash; through a 16-month
-            Diploma in Christian Ministry, taught in English and Kiswahili.
+            leadership, and in the marketplace.
           </p>
           <div className="mt-10 flex gap-4 md:gap-6">
             <Link
               href="/admissions"
-              className="rounded-sm bg-gold px-6 py-3 font-body text-sm font-medium text-ink shadow-md transition hover:bg-gold-light"
+              className="rounded-full bg-gold px-3 py-2 sm:px-6 sm:py-3 font-body text-xs sm:text-sm font-medium text-ink shadow-md transition hover:bg-gold-light"
             >
               Apply for Admission
             </Link>
             <Link
               href="/programs"
-              className="rounded-sm border border-parchment/30 px-6 py-3 font-body text-sm text-parchment transition hover:border-gold hover:text-gold"
+              className="rounded-full border border-parchment/30 px-3 py-2 sm:px-6 sm:py-3 font-body text-sm text-parchment transition hover:border-gold hover:text-gold"
             >
               View the Program
             </Link>
@@ -73,22 +75,8 @@ export default function Home() {
         <div className="rule" />
       </section>
 
-      {/* Stat strip */}
-      <section className="border-b border-ink/10 bg-parchment">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 py-14 sm:grid-cols-4">
-          {[
-            { n: "1996", l: "Founded, with three students" },
-            { n: "19", l: "Nations represented" },
-            { n: "16 mo.", l: "Diploma program" },
-            { n: "2025", l: "Licensed TVET institution" },
-          ].map((s) => (
-            <div key={s.l}>
-              <p className="font-display text-3xl text-gold-dark md:text-4xl">{s.n}</p>
-              <p className="mt-1 font-body text-sm text-slate">{s.l}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Stats Card */}
+      <StatsCard />
 
       {/* About excerpt */}
       <section className="mx-auto max-w-6xl px-6 py-24">
@@ -103,12 +91,13 @@ export default function Home() {
           </div>
           <div className="space-y-5 font-body text-base leading-relaxed text-ink/80">
             <p>
-              New Creation International Bible College is <strong>inter-denominational</strong>,
-              set in an atmosphere conducive to focusing wholly on God, His
-              Word, and His plan for your life. Since opening in September
-              1996 with <strong>three students</strong>, the college has equipped and trained
-              hundreds of ministers drawn from nations across Africa, Europe,
-              Asia, and North America.
+              New Creation International Bible College is{" "}
+              <strong>inter-denominational</strong>, set in an atmosphere
+              conducive to focusing wholly on God, His Word, and His plan for
+              your life. Since opening in September 1996 with{" "}
+              <strong>three students</strong>, the college has equipped and
+              trained hundreds of ministers drawn from nations across Africa,
+              Europe, Asia, and North America.
             </p>
             <p>
               In April 2025, NCIBC was registered and licensed as a TVET
@@ -163,8 +152,8 @@ export default function Home() {
             Ministers trained from these nations.
           </h2>
           <p className="mt-4 max-w-xl font-body text-sm leading-relaxed text-parchment/60">
-            Graduates have returned home &mdash; and gone elsewhere &mdash; carrying
-            what they learned in Nakuru into pulpits, marketplaces, and
+            Graduates have returned home &mdash; and gone elsewhere &mdash;
+            carrying what they learned in Nakuru into pulpits, marketplaces, and
             leadership across the world.
           </p>
           <div className="mt-12">
@@ -179,8 +168,8 @@ export default function Home() {
           Serious with God, and ready to be equipped?
         </h2>
         <p className="mx-auto mt-4 max-w-lg font-body text-base text-slate">
-          Admissions are open for the next intake. Classes run in English
-          and Kiswahili.
+          Admissions are open for the next intake. Classes run in English and
+          Kiswahili.
         </p>
         <Link
           href="/admissions"
