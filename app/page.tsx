@@ -50,10 +50,9 @@ export default function Home() {
           >
             Welcome to New Creation International Bible College
           </h1>
-          <p className="hidden md:block mt-6 sm:max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
+          <p className=" mt-6 sm:max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
             At New Creation International Bible College we train men and women
-            who are serious with God &mdash; in full-time ministry, in
-            leadership, and in the marketplace.
+            who are serious with God.
           </p>
           <div className="mt-10 flex gap-4 md:gap-6">
             <Link
