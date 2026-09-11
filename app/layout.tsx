@@ -21,6 +21,29 @@ export const metadata: Metadata = {
   title: "New Creation International Bible College",
   description:
     "A non-denominational, TVET-licensed Bible college training ministers from the nations since 1996. 16-month Diploma in Christian Ministry, taught in English and Kiswahili.",
+  keywords: [
+    "Bible College Kenya",
+    "NCIBC",
+    "New Creation International Bible College",
+    "Theology Diploma Kenya",
+    "TVET Bible school Nakuru",
+    "Ministry training Kenya",
+    "Christian Ministry Diploma",
+  ],
+  openGraph: {
+    title: "New Creation International Bible College | Nakuru, Kenya",
+    description:
+      "Equipping men and women for ministry and marketplace leadership through our 16-month Diploma program.",
+    url: "https://ncibc.ac.ke",
+    siteName: "NCIBC",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "New Creation International Bible College",
+    description: "Equipping men and women for ministry and marketplace leadership.",
+  },  
 };
 
 export default function RootLayout({

@@ -4,10 +4,6 @@ import SemesterTimeline from "./components/SemesterTimeline";
 import NationsList from "./components/NationsList";
 import HeroCarousel from "./components/HeroCarousel";
 
-// SEO metadata for the College Home Page. This only works because this
-// file is a server component — metadata can't be exported from a file
-// marked "use client", which is why the hero's image carousel lives in
-// its own client component (HeroCarousel) instead of here.
 export const metadata: Metadata = {
   title: "New Creation International Bible College | Nakuru, Kenya",
   description:
@@ -25,7 +21,7 @@ export const metadata: Metadata = {
     title: "New Creation International Bible College | Nakuru, Kenya",
     description:
       "Equipping men and women for ministry and marketplace leadership through our 16-month Diploma program.",
-    url: "https://ncibc.org",
+    url: "https://ncibc.ac.ke",
     siteName: "NCIBC",
     locale: "en_US",
     type: "website",
@@ -35,6 +31,7 @@ export const metadata: Metadata = {
     title: "New Creation International Bible College",
     description: "Equipping men and women for ministry and marketplace leadership.",
   },
+  
 };
 
 
