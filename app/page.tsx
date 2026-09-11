@@ -42,16 +42,15 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-ink">
+      <section className="relative mx-auto overflow-hidden bg-ink">
         <HeroCarousel />
-
-        <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 text-white md:pb-32 md:pt-28">
+        <div className="relative flex flex-col items-center sm:items-start px-6 sm:pl-24 pb-24 pt-20 text-white md:pb-32 md:pt-28">
           <h1
-            className={`font-display mt-6 max-w-3xl  text-4xl leading-[1.1] text-balance sm:text-5xl md:text-6xl`}
+            className={`font-display mt-24 sm:mt-5  text-3xl leading-[1.1] text-balance sm:text-4xl md:text-5xl`}
           >
             Welcome to New Creation International Bible College
           </h1>
-          <p className="hidden md:block mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
+          <p className="hidden md:block mt-6 sm:max-w-xl font-body text-base leading-relaxed text-parchment/85 md:text-lg">
             At New Creation International Bible College we train men and women
             who are serious with God &mdash; in full-time ministry, in
             leadership, and in the marketplace.
